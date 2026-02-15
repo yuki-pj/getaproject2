@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>下駄診断 - あなたにぴったりの下駄を見つけよう</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- スタート画面 -->
+        <div id="start-screen" class="screen active">
+            <div class="content">
+                <h1 class="main-title">下駄診断</h1>
+                <p class="subtitle">あなたにぴったりの下駄を見つけます</p>
+                <p class="description">
+                    いくつかの質問にお答えいただくだけで、<br>
+                    あなたのライフスタイルに合った下駄をご提案いたします。
+                </p>
+                <button id="start-btn" class="btn btn-primary">診断を始める</button>
+            </div>
+        </div>
+
+        <!-- 質問画面 -->
+        <div id="question-screen" class="screen">
+            <!-- プログレスバー -->
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+                <p class="progress-text">質問 <span id="current-question">1</span> / <span id="total-questions">4</span></p>
+            </div>
+
+            <div class="content">
+                <h2 id="question-text" class="question-text"></h2>
+                <div id="options-container" class="options-container"></div>
+            </div>
+        </div>
+
+        <!-- 結果画面 -->
+        <div id="result-screen" class="screen">
+            <div class="content">
+                <h2 class="result-title">あなたにおすすめの下駄</h2>
+                <div class="result-card">
+                    <h3 id="result-name" class="geta-name"></h3>
+                    <p id="result-description" class="geta-description"></p>
+                    <div id="product-cards" class="product-cards"></div>
+                    <div class="category-link-section">
+                        <p class="category-link-text">このカテゴリの商品をもっと見る</p>
+                        <button id="view-category-btn" class="btn btn-secondary btn-category">
+                            カテゴリページへ
+                        </button>
+                    </div>
+                </div>
+                <button id="restart-btn" class="btn btn-secondary">もう一度診断する</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
