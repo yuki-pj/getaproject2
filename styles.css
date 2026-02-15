@@ -5,11 +5,16 @@
    ========================================================================= */
 :root {
     /* Color Palette - Japanese Traditional Colors */
-    --color-base: #FCFAF2;      /* 生成色 (Kinari) - Background */
-    --color-main: #594E46;      /* 憲法色 (Kenpou-iro) - Text */
-    --color-accent: #CB6954;    /* 照柿 (Terigaki) - Primary Buttons/Highlights */
-    --color-sub: #F2EAD8;       /* 練色 (Neri-iro) - Secondary Backgrounds */
-    --color-tertiary: #B8A596;  /* 亜麻色 (Ama-iro) - Secondary Text/Borders */
+    --color-base: #FCFAF2;
+    /* 生成色 (Kinari) - Background */
+    --color-main: #594E46;
+    /* 憲法色 (Kenpou-iro) - Text */
+    --color-accent: #CB6954;
+    /* 照柿 (Terigaki) - Primary Buttons/Highlights */
+    --color-sub: #F2EAD8;
+    /* 練色 (Neri-iro) - Secondary Backgrounds */
+    --color-tertiary: #B8A596;
+    /* 亜麻色 (Ama-iro) - Secondary Text/Borders */
     --color-white: #FFFFFF;
 
     /* Typography */
@@ -35,14 +40,16 @@ body {
     background-color: var(--color-base);
     color: var(--color-main);
     line-height: 2;
-    letter-spacing: 0.1em; /* Widen letter spacing for elegance */
+    letter-spacing: 0.1em;
+    /* Widen letter spacing for elegance */
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px;
     background-image: radial-gradient(var(--color-sub) 1px, transparent 1px);
-    background-size: 30px 30px; /* Subtle dot pattern */
+    background-size: 30px 30px;
+    /* Subtle dot pattern */
 }
 
 /* =================================================================*********
@@ -57,7 +64,8 @@ body {
     overflow: hidden;
     position: relative;
     min-height: 600px;
-    border: 1px solid rgba(184, 165, 150, 0.3); /* Subtle border */
+    border: 1px solid rgba(184, 165, 150, 0.3);
+    /* Subtle border */
     padding: 20px;
 }
 
@@ -76,7 +84,8 @@ body {
 }
 
 .content {
-    position: relative; /* To sit above the texture */
+    position: relative;
+    /* To sit above the texture */
     z-index: 1;
     padding: 40px 30px;
     text-align: center;
@@ -105,14 +114,23 @@ body {
 }
 
 @keyframes fadeInPage {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* =================================================================*********
    Typography & Elements
    ========================================================================= */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-weight: 500;
     color: var(--color-main);
     margin-bottom: 1.5rem;
@@ -176,7 +194,8 @@ h1, h2, h3 {
 .btn-primary:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(203, 105, 84, 0.4);
-    background-color: #d67a65; /* Slightly lighter on hover */
+    background-color: #d67a65;
+    /* Slightly lighter on hover */
 }
 
 .btn-secondary {
@@ -228,7 +247,8 @@ h1, h2, h3 {
 .progress-text {
     font-size: 0.9rem;
     color: var(--color-tertiary);
-    font-family: sans-serif; /* Use sans-serif for numbers for readability */
+    font-family: sans-serif;
+    /* Use sans-serif for numbers for readability */
     letter-spacing: 0.05em;
 }
 
@@ -246,7 +266,8 @@ h1, h2, h3 {
     background-color: var(--color-white);
     border: 1px solid var(--color-sub);
     border-radius: var(--radius-md);
-    text-align: center; /* Center text for Japanese style elegance */
+    text-align: center;
+    /* Center text for Japanese style elegance */
     color: var(--color-main);
     font-family: inherit;
     font-size: 1.1rem;
@@ -255,7 +276,8 @@ h1, h2, h3 {
 }
 
 .option-btn::before {
-    display: none; /* Remove the diamond decoration */
+    display: none;
+    /* Remove the diamond decoration */
 }
 
 .option-btn:hover {
@@ -275,7 +297,7 @@ h1, h2, h3 {
 
 .result-card {
     background-color: var(--color-white);
-    border-radius: 0; 
+    border-radius: 0;
     border: none;
     box-shadow: none;
     padding: 0;
@@ -318,12 +340,13 @@ h1, h2, h3 {
 
 .product-card:first-child {
     border-color: var(--color-tertiary);
-    background-color: #FCFAF5; /* Slightly warmer background for top rec */
+    background-color: #FCFAF5;
+    /* Slightly warmer background for top rec */
 }
 
 .product-card:hover {
     border-color: var(--color-tertiary);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 }
 
 .product-rank {
@@ -353,7 +376,8 @@ h1, h2, h3 {
     color: var(--color-accent);
     font-weight: 500;
     margin-bottom: 12px;
-    font-family: sans-serif; /* Price numbers often look better in sans */
+    font-family: sans-serif;
+    /* Price numbers often look better in sans */
 }
 
 .product-desc {
@@ -400,15 +424,33 @@ h1, h2, h3 {
         min-height: 100vh;
         box-shadow: none;
     }
-    
+
     .main-title {
-        font-size: 2.2rem;
+        font-size: 2.0rem;
+        margin-bottom: 0.2rem;
+        padding-bottom: 15px;
     }
-    
+
+    .main-title::after {
+        margin-top: 15px;
+        width: 40px;
+    }
+
+    .subtitle {
+        margin-bottom: 1.5rem;
+        font-size: 1rem;
+    }
+
+    .description {
+        margin-bottom: 2rem;
+        font-size: 0.95rem;
+        line-height: 1.8;
+    }
+
     .content {
         padding: 30px 20px;
     }
-    
+
     .option-btn {
         padding: 15px 20px;
         font-size: 1rem;
