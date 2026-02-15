@@ -397,6 +397,11 @@ function showQuestion() {
 
 // 選択肢選択
 function selectOption(value, optionData) {
+    // フォーカスを外す（次の質問で選択状態が残らないようにする）
+    if (document.activeElement) {
+        document.activeElement.blur();
+    }
+    
     appState.answers.push({ value, data: optionData });
 
     if (appState.currentQuestionIndex < questions.length - 1) {

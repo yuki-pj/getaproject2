@@ -191,23 +191,25 @@ h3 {
     box-shadow: 0 4px 15px rgba(203, 105, 84, 0.3);
 }
 
-.btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(203, 105, 84, 0.4);
-    background-color: #d67a65;
-    /* Slightly lighter on hover */
-}
-
 .btn-secondary {
     background-color: transparent;
     color: var(--color-main);
     border: 1px solid var(--color-tertiary);
 }
 
-.btn-secondary:hover {
-    background-color: var(--color-sub);
-    border-color: var(--color-main);
-    color: var(--color-main);
+@media (hover: hover) {
+    .btn-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(203, 105, 84, 0.4);
+        background-color: #d67a65;
+        /* Slightly lighter on hover */
+    }
+
+    .btn-secondary:hover {
+        background-color: var(--color-sub);
+        border-color: var(--color-main);
+        color: var(--color-main);
+    }
 }
 
 /* =================================================================*********
@@ -280,10 +282,13 @@ h3 {
     /* Remove the diamond decoration */
 }
 
-.option-btn:hover {
-    background-color: var(--color-sub);
-    border-color: var(--color-tertiary);
-    transform: translateY(-2px);
+/* Hover effect only for devices that support hover (prevents sticky hover on mobile) */
+@media (hover: hover) {
+    .option-btn:hover {
+        background-color: var(--color-sub);
+        border-color: var(--color-tertiary);
+        transform: translateY(-2px);
+    }
 }
 
 /* =================================================================*********
